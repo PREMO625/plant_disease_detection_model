@@ -89,3 +89,40 @@ From the work and improvements implemented in Week 1, I gained valuable insights
 
 
 ---
+
+## Week 2 Report
+
+### What Was Done
+- **Model Architecture & Implementation:**  
+  - Developed a Convolutional Neural Network (CNN) using TensorFlow/Keras with multiple convolutional layers, pooling layers, flattening, and dense layers.  
+  - The CNN was designed to process 224×224 RGB images and output probabilities for 38 classes corresponding to various plant diseases.
+  
+- **Training and Evaluation:**  
+  - Compiled the model using the categorical crossentropy loss function, Adam optimizer, and monitored metrics such as accuracy, precision, and recall.
+  - Utilized data generators with augmentation to feed the training and validation data into the model.
+  - Employed callbacks like EarlyStopping, ModelCheckpoint, and ReduceLROnPlateau to optimize the training process and prevent overfitting.
+  - Trained the model for 5 epochs, achieving training accuracy of around 98% and validation accuracy close to 91%.
+  - Evaluated the model on a separate test set, recording metrics that confirmed the model’s promising performance.
+
+- **Model Saving:**  
+  - Saved the complete trained model to disk (`cnn_model.keras`), which includes the architecture, weights, and optimizer state for future use.
+
+### What I Learned
+- **Deep Learning Fundamentals:**  
+  - Gained hands-on experience in designing and training CNNs for image classification.
+  - Understood how convolutional layers extract hierarchical features (edges, textures, patterns) essential for recognizing plant diseases.
+
+- **Data Augmentation & Preprocessing:**  
+  - Learned the importance of augmenting data to improve model generalization and robustness, especially in the context of varied image conditions in agriculture.
+  - Improved skills in using data generators and image preprocessing pipelines.
+
+- **Model Optimization Techniques:**  
+  - Implemented and observed the impact of callbacks such as EarlyStopping, ModelCheckpoint, and ReduceLROnPlateau, which helped in fine-tuning the learning process.
+  - Analyzed training and validation metrics to detect potential overfitting and performance plateaus.
+
+- **Model Persistence:**  
+  - Understood the significance of saving the complete model for later deployment, ensuring reproducibility and ease of integration into production systems.
+
+### Next Steps (Deployment Focus)
+- **Interactive Deployment:**  
+  - Plan to deploy the model through an interactive web application using Streamlit.
